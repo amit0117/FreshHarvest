@@ -1,0 +1,11 @@
+table {
+    border-collapse: collapse !important;
+    width: 100% !important;
+    table-layout: fixed !important;
+  }
+  
+  th, td {
+    padding: 8px !important;
+    text-align: center !important;
+    word-wrap: break-word !important;
+  }

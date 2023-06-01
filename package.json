@@ -1,0 +1,28 @@
+{
+  "name": "food-e-commerse",
+  "version": "1.0.0",
+  "description": "This is a food e-commerse app build using nodejs,express,ejs and other tech staks",
+  "main": "index.js",
+  "scripts": {
+    "start": "nodemon index.js"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/amit0117/Product-E-commerse.git"
+  },
+  "author": "Kumar Amit",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/amit0117/Product-E-commerse/issues"
+  },
+  "homepage": "https://github.com/amit0117/Product-E-commerse#readme",
+  "dependencies": {
+    "body-parser": "^1.20.2",
+    "ejs": "^3.1.9",
+    "express": "^4.18.2",
+    "express-session": "^1.17.3",
+    "mysql": "^2.18.1",
+    "request": "^2.88.2",
+    "stripe": "^12.7.0"
+  }
+}
