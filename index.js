@@ -133,7 +133,7 @@ app.post('/place_order',(req,res)=>{
     let product_ids=''
     let cart=req.session.cart
     var id=Date.now()
-    console.log(id)
+    // console.log(id)
     req.session.order_id=id
     for(let i=0;cart&&i<cart.length;++i){
         product_ids+=''+cart[i].id
@@ -158,7 +158,7 @@ app.post('/place_order',(req,res)=>{
                 return res.render('pages/error',{err:err})
 
             }
-            else console.log('Product inserted into database successfully')
+            // else console.log('Product inserted into database successfully')
         })
     }    
 })
@@ -181,7 +181,7 @@ app.get('/verify_payment',(req,res)=>{
     const transaction_id=req.query.transaction_id
     const order_id=req.session.order_id
     const query='INSERT INTO payments (order_id,transaction_id,date) VALUES ?'
-    console.log('payment',transaction_id,"    ",order_id)
+    // console.log('payment',transaction_id,"    ",order_id)
     const values=[[order_id,transaction_id,new Date()]]
     connect.query(query,[values],(err,result)=>{
         if(err){
@@ -196,7 +196,7 @@ app.get('/verify_payment',(req,res)=>{
         if(err){
             return res.render('pages/error',{err:err})
         }
-            console.log(order_id,"   ",transaction_id)
+            // console.log(order_id,"   ",transaction_id)
             const status='paid'
             return res.render('pages/thank_you',{stripeEmail,stripeToken,stripeTokenType,total,order_id,status})  // If no error occurs
     })
