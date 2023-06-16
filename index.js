@@ -12,10 +12,10 @@ const PUBLISHIBLE_KEY="pk_test_51NDOT3SJLI4vnAgh7X33wlPk4jcPXGEuNuNnUTyDQE4CwBPa
 const stripe=require('stripe')(SECRET_KEY)
 const connect=mysql.createConnection(
     {
-        host:'localhost',
-        user:'root',
-        password:'',
-        database:'foode-commerse'
+        host:'sql12.freemysqlhosting.net',
+        user:'sql12626755',
+        password:'eUm9rQZ9P9',
+        database:'sql12626755'
     }
     )
     app.use(session({secret:"ANYSECRETKEYHERE"}))
